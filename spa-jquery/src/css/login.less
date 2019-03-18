@@ -1,0 +1,155 @@
+@login-bg-color: #e6e6e6;
+@login-box-width: 800px;
+@login-input-height: 50px;
+
+.login-page-body{
+  .fixed-current-view;
+  .login-wrap{
+    width: @login-box-width;
+    height: 444px;
+    box-shadow: #bdbdbd 0 0 20px;
+    background: #fff url("../img/login_bg.png") no-repeat top left;
+    padding: 0 40px 0 300px;
+    box-sizing: border-box;
+    .login-type{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 52px;
+      .type-item{
+        height: 60px;
+        line-height: 60px;
+        box-sizing: border-box;
+        border-bottom: 4px solid transparent;
+        font-size: 14px;
+        &:hover{
+          border-bottom-color:#ec5c59;
+          color: #ec5c59;
+          cursor: pointer;
+        }
+      }
+      .chosen-item{
+        border-bottom-color:#ec5c59;
+        color: #ec5c59;
+      }
+    }
+  }
+  //扫码登陆
+  .qr-code-wrap{
+    img{
+      width: 185px;
+      height: 185px;
+      margin-bottom: 56px;
+    }
+    #qrCode{
+      margin-bottom: 56px;
+    }
+    text-align: center;
+  }
+  .form-wrap{
+    .input-box{
+      width: 100%;
+      height: @login-input-height;
+      line-height: @login-input-height;
+      color:#808080;
+      padding: 0 22px;
+      font-size: 16px;
+      outline: none;
+      border: 1px solid #dbdbdb;
+      margin-bottom: 30px;
+      &:focus{
+        border-color: @global-main-color;
+      }
+    }
+    //密码框
+    .pwd-box{
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      .see-pwd-icon{
+        position: absolute;
+        top: 17px;
+        right: 30px;
+        .bg-icon('../img/see-pwd-icon.png', 18px, 12px);
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .hide-pwd-icon{
+        top: 22px;
+        .bg-icon('../img/hide-pwd-icon.png'; 18px; 8px);
+      }
+    }
+    .submit-btn{
+      width: 100%;
+      height: @login-input-height;
+      background-color: @global-main-color;
+      color: #fff;
+      text-align: center;
+      line-height: @login-input-height;
+      font-size: 16px;
+      border: none;
+      outline:none;
+      margin-bottom: 30px;
+    }
+    //验证码框
+    .code-box{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .input-box{
+        width: 300px;
+        margin-right: 16px;
+      }
+      .submit-btn{
+        border-radius:4px;
+      }
+      .disabled-cls{
+        background-color: #eaeaea;
+        color: #333;
+      }
+    }
+    .tip-box{
+      display: flex;
+      justify-content: space-between;
+      color: #b3b3b3;
+      font-size: 16px;
+      margin-bottom: 40px;
+      span:hover{
+        cursor: pointer;
+        color: #333;
+      }
+      .remember-wrap{
+        display: flex;
+        align-items: center;
+
+        .checkbox{
+          display: none;
+        }
+        .unchecked{
+          display: inline-block;
+          background-color: @global-main-color;
+          width: 16px;
+          height: 16px;
+          margin: 0 5px 0 0;
+          position: relative;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .checked{
+          &:after{
+            background-image: url(../img/check.png);
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

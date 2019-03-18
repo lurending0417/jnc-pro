@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="./css/common/common.less">-->
+    <%= htmlWebpackPlugin.files.webpackManifest %>
+</head>
+<body>
+
+    <div class="lock-page" id="lockPage">
+
+    </div>
+
+
+    <div class="header">
+        <div class="header-left">
+            <div class="logo">
+                <img src="./img/index_logo.png" alt="">
+            </div>
+            <a class="list-icon-wrap" id="listControlBtn">
+                <i class="list-icon"></i>
+                <i class="more-icon"></i>
+            </a>
+            <i class="common-func-icon"></i>
+            <i class="collect-icon"></i>
+            <div class="search-wrap">
+                <i class="search-icon"></i>
+                <input id="searchBtn" class="search-input" type="text" placeholder="用户工作看板 >">
+                <ul class="search-result-wrap" id="searchResultWrap">
+                    <!--<li>item</li>-->
+                </ul>
+            </div>
+        </div>
+
+        <!--<div class="search-box">-->
+            <!--<input type="text" class="search-box">-->
+            <!--<i class="search-icon"></i>-->
+        <!--</div>-->
+        <div class="header-right">
+            <i class="msg-icon"></i>
+            <span>用户名张三</span>
+            <i class="lock-icon" id="lockBtn"></i>
+        </div>
+        <!--菜单-->
+        <div class="list-total-wrap">
+            <div class="hidden-mask">
+                <div id="firstLevelList" class="list-wrap first-level-list-wrap">
+                    <!--一级菜单-->
+                </div>
+            </div>
+            <div id="secondLevelList" class="list-wrap second-level-list-wrap">
+                <!--子菜单-->
+            </div>
+        </div>
+    </div>
+
+    <!--<div id="ui-view">-->
+        <!--&lt;!&ndash;路由页面&ndash;&gt;-->
+    <!--</div>-->
+
+    <!--<object data="http://192.168.20.199:3001/home.html" id="objectLabel" class="ui-view-cls" type="text/html">-->
+        <!--该浏览器暂不支持，请升级或者下载其他浏览器-->
+    <!--</object>-->
+
+    <iframe src="http://192.168.20.199:3001/home.html" name="ifr" frameborder="0" class="ui-view-cls" id="ifr">
+        该浏览器暂不支持，请升级或者下载其他浏览器
+    </iframe>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="nav-item-wrap chosen-item">
+            <span>home</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>list</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>item</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>english</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>nav</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>nav</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>nav</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="nav-item-wrap">
+            <span>已经打开的界面</span>
+            <span class="close-icon">x</span>
+        </div>
+        <div class="more-item" id="morePageBtn">
+            <span>…</span>
+            <ul class="detail-list">
+                <li>home</li>
+                <li>list</li>
+                <li>item</li>
+                <li>en</li>
+                <li>home</li>
+                <li>list</li>
+                <li>item</li>
+                <li>en</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

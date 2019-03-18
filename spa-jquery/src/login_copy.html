@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/common/bootstrap.min.css">
+    <%= htmlWebpackPlugin.files.webpackManifest %>
+</head>
+<body class="login-page-body">
+    <div class="login-wrap">
+        <h4 class="login-title">账号登陆</h4>
+        <div class="login-content-wrap">
+
+            <div class="login-form-wrap">
+
+            <!--<div class="alert alert-warning alert-dismissible alert-warning-wrap" role="alert">-->
+              <!--<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>-->
+              <!--用户名错误-->
+            <!--</div>-->
+
+                <input class="input-box" type="text" id="user" name="" placeholder="请输入个人账号">
+                <span class="pwd-box">
+                    <input class="input-box" type="password" id="pwd" placeholder="请输入登陆密码">
+                    <i class="see-pwd-icon" id="seePwdBtn"></i>
+                </span>
+                <div class="tip-box">
+                    <div class="remember-wrap" id="rememberBtn">
+                        <label class="unchecked checked">
+                            <input id="rememberBox" class="checkbox" type="checkbox" name="" value="">
+                        </label>
+                        <span>记住密码</span>
+                    </div>
+                    <span id="forgetBtn" class="forget-link">忘记密码？</span>
+                </div>
+                <input class="submit-btn" type="button" id="loginBtn" name="" value="登陆">
+            </div>
+            <div class="switch-login-wrap">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

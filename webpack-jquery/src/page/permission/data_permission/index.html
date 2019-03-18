@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--<link rel="stylesheet" href="../../common/bootstrap.min.css">-->
+</head>
+<body>
+<div class="menu-permission-wrap">
+
+    <div class="left-content-wrap">
+        <div class="left-title">
+            <i class="func-icon"></i>
+            <span>集合列表</span>
+            <!--<a class="btn-default btn" data-title="新增模型" data-body="modelBody" data-opration="add" data-toggle="modal" data-target="#myModal">新增模型</a>-->
+        </div>
+        <div class="left-content-view" >
+            <div class="left-content" id="menuTree">
+                <!--菜单树-->
+            </div>
+        </div>
+    </div>
+
+    <div class="right-content-wrap">
+        <div class="top-content" >
+            <div class="content-title">
+                <!--<a class="btn btn-danger" id="addDataSet" data-title="新增数据集合" data-opration="add" data-toggle="modal" data-target="#myModal">新增数据集合</a>-->
+                <h4>数据集合</h4>
+            </div>
+
+            <div id="dataSetTableView"></div>
+            <div class="page-btn-wrap">
+                <!--分页-->
+                <div id="dataSetPage"></div>
+                <!--按钮-->
+                <div class="btn-wrap" id="dataSetBtn"></div>
+            </div>
+        </div>
+        <div class="top-content">
+
+            <div class="content-title">
+                <!--<a class="btn btn-danger" id="addDataField" data-toggle="modal" data-target="#myModal1">新增数据字段</a>-->
+                <h4 id="testBtn">数据字段</h4>
+            </div>
+
+            <div id="dataFieldTableView"></div>
+            <div class="page-btn-wrap">
+                <!--分页-->
+                <div id="dataFieldPage"></div>
+                <!--按钮-->
+                <div class="btn-wrap" id="dataFieldBtn"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <form class="form-horizontal" id="dataFieldForm">
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">字段序号</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="order">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段名称</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段类型</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="type">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段编码</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="encode">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段长度</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="length">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段精度</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="accuracy">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段值域编码</label>
+                                <div class="col-sm-9">
+                                    <select name="fieldEncode" class="form-control">
+                                        <option value="1">前后缀</option>
+                                        <option value="2">初始值</option>
+                                        <option value="2">最大值</option>
+                                        <option value="2">增量值</option>
+                                        <option value="2">随机值</option>
+                                        <option value="2">当前值</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段更新</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="refresh">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段启用</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="enabled">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">数据表模式</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="service">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">数据表编码</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="dbEncode">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">数据表名称</label>
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control" name="dbName">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">字段备注信息</label>
+                                <div class="col-sm-9">
+                                    <textarea class="form-control" rows="3" name="dbScheme"></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-default">取消</button>
+                    <button class="btn btn-danger">保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+<!--<script src="http://192.168.20.199:3001/permission/data-permission/data-permission.js"></script>-->

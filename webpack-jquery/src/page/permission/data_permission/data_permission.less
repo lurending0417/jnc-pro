@@ -1,0 +1,178 @@
+@import "../../../common/config";
+
+
+.menu-permission-wrap{
+  display: flex;
+  .left-content-wrap{
+    width: 300px;
+    background-color: #f0f0f0;
+    .left-title{
+      height: 40px;
+      padding: 16px;
+      background-color: @global-main-color;
+      line-height: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      .func-icon{
+        background-image: url('../../../img/func-icon.png');
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+        background-size: 16px 14px;
+        margin-right: 6px;
+      }
+      span{
+        flex-grow:1;
+      }
+    }
+    .left-content-view{
+      width: 300px;
+      overflow: hidden;
+      .left-content{
+        width: 320px;
+        height: 100%;
+        overflow-y: scroll;
+        .nav-item-wrap{
+          height: 40px;
+          padding: 0 17px 0 38px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .down-icon{
+            background-image: url('../../../img/arrow-right-black.png');
+            display: inline-block;
+            width: 9px;
+            height: 15px;
+            background-size:9px 15px;
+          }
+          &:hover{
+            //background-color: @global-main-color;
+            //color: #fff;
+            cursor: pointer;
+          }
+        }
+        .nav-first-item-wrap{
+          background-color: #fff;
+        }
+        .nav-second-item-wrap{
+          background-color: #f5f5f5;
+        }
+        .nav-third-item-wrap{
+          background-color: #ebebeb;
+        }
+        .clicked-show-item{
+          background-color: @global-main-color;
+          color: #fff;
+          .down-icon{
+            background-image: url('../../../img/arrow-down-white.png');
+            width: 15px;
+            height: 9px;
+            background-size: 15px 9px;
+          }
+        }
+        .clicked-hide-item{
+          background-color: @global-main-color;
+          color: #fff;
+          .down-icon{
+            background-image: url('../../../img/arrow-right-white.png');
+            width:9px;
+            height:15px;
+            background-size:9px 15px ;
+          }
+        }
+        .show-child{
+          .down-icon{
+            background-image: url('../../../img/arrow-down-black.png');
+            width: 15px;
+            height: 9px;
+            background-size: 15px 9px;
+          }
+        }
+        .visible-cls{
+          display: none;
+        }
+      }
+    }
+  }
+  .right-content-wrap{
+    background-color: #fafafa;
+    flex-grow: 1;
+    width: 100%;
+    .toolBar{
+      display: flex;
+      align-items: flex-end;
+    }
+    .top-content{
+      height: 40vh;
+      .content-title{
+        display: flex;
+        align-items: center;
+        h4{
+          text-align: center;
+          flex-grow: 1;
+        }
+        table{
+          tbody{
+            tr{
+              &:hover{
+                background-color: #f5f5f5;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.page-btn-wrap{
+  position: relative;
+  .btn-wrap{
+    position: absolute;
+    top: 0px;
+    right: 300px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 32px;
+      line-height: 32px;
+      background-color: #fff;
+      border: 1px solid @global-main-color;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px;
+      .active-icon{
+        background-image: url("../../../img/active-icon-off.png");
+        background-size: 10px 12px;
+        width: 10px;
+        height: 12px;
+        display: inline-block;
+        margin-right: 6px;
+      }
+      &:hover{
+        cursor: pointer;
+        background-color: @global-main-color;
+        color: #fff;
+        .active-icon{
+          background-image: url("../../../img/active-icon-on.png");
+        }
+      }
+    }
+    .clicked{
+      background-color: @global-main-color;
+      color: #fff;
+      .active-icon{
+        background-image: url("../../../img/active-icon-on.png");
+      }
+    }
+  }
+}

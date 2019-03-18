@@ -1,0 +1,30 @@
+[
+    {
+        "url": "home",
+        "title": "主页"
+    },
+    {
+        "url": "list",
+        "title": "用户详细信息"
+    },
+    {
+        "url": "table",
+        "title": "表格"
+    },
+    {
+        "url": "custome",
+        "title": "表格"
+    },
+    {
+        "url": "customization",
+        "title": "定制化"
+    },
+    {
+        "url": "permission/data_permission",
+        "title": "数据字典"
+    },
+    {
+        "url": "permission/menu_permission",
+        "title": "菜单权限"
+    }
+]

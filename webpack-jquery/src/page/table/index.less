@@ -1,0 +1,185 @@
+body{
+  display: flex;
+  height: 700px;
+  .left-content-wrap{
+    width: 300px;
+    background-color: #f0f0f0;
+    .left-title{
+      height: 40px;
+      padding: 16px;
+      background-color: @global-main-color;
+      line-height: 40px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      .func-icon{
+        background-image: url('../../img/func-icon.png');
+        display: inline-block;
+        width: 16px;
+        height: 14px;
+        background-size: 16px 14px;
+        margin-right: 6px;
+      }
+    }
+    .left-content-view{
+      width: 300px;
+      overflow: hidden;
+      .left-content{
+        width: 320px;
+        height: 100%;
+        overflow-y: scroll;
+        .nav-item-wrap{
+          height: 40px;
+          padding: 0 17px 0 38px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          &:before{
+            position: absolute;
+            left: -6px;
+            top: 0;
+            content: '';
+            width: 6px;
+            height: 100%;
+            background-color: @global-main-color;
+          }
+          .down-icon{
+            background-image: url('../../img/arrow-right-black.png');
+            display: inline-block;
+            width: 9px;
+            height: 15px;
+            background-size: 9px 15px ;
+          }
+          &:hover{
+            //background-color: @global-main-color;
+            //color: #fff;
+            cursor: pointer;
+          }
+        }
+        .nav-first-item-wrap{
+          background-color: #fff;
+        }
+        .nav-second-item-wrap{
+          background-color: #f5f5f5;
+        }
+        .nav-third-item-wrap{
+          background-color: #ebebeb;
+        }
+        .clicked-show-item{
+          background-color: #fff;
+          color: @global-main-color;
+          &:before{
+            left: 0px;
+          }
+          .down-icon{
+            //background-image: url('../../img/arrow-down-white.png');
+            background-image: url('../../img/arrow-down-black.png');
+            width: 15px;
+            height: 9px;
+            background-size: 15px 9px;
+          }
+        }
+        .clicked-hide-item{
+          color: @global-main-color;
+          background-color: #fff;
+          &:before{
+            left: 0;
+          }
+          .down-icon{
+            //background-image: url('../../img/arrow-right-white.png');
+            background-image: url('../../img/arrow-right-black.png');
+            width:9px;
+            height:15px;
+            background-size:9px 15px;
+          }
+        }
+        .show-child{
+          .down-icon{
+            background-image: url('../../img/arrow-down-black.png');
+            width: 15px;
+            height: 9px;
+            background-size: 15px 9px;
+          }
+        }
+        .visible-cls{
+          display: none;
+        }
+      }
+    }
+  }
+  .table-wrap{
+    width: 84%;
+    flex-grow: 1;
+    height: 100%;
+    background-color: #fafafa;
+    .table-head-wrap{
+      display: flex;
+      height: 40px;
+      align-items: center;
+      background-color: #ebebeb;
+      padding: 0 20px;
+      .icon-wrap{
+        display: flex;
+        align-items: center;
+        .table-icon{
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background-size: 16px 16px;
+          margin-right: 16px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+        .t-add-icon{
+          background-image: url("../../img/t-add-icon.png");
+        }
+        .t-delete-icon{
+          background-image: url("../../img/t-delete-icon.png");
+        }
+        .t-edit-icon{
+          background-image: url("../../img/t-edit-icon.png");
+        }
+        .t-group-icon{
+          background-image: url("../../img/t-group-icon.png");
+        }
+        .t-lock-icon{
+          background-image: url("../../img/t-lock-icon.png");
+        }
+        .t-order-icon{
+          background-image: url("../../img/t-order-icon.png");
+        }
+        .t-refresh-icon{
+          background-image: url("../../img/t-refresh-icon.png");
+        }
+        .t-save-icon{
+          background-image: url("../../img/t-save-icon.png");
+        }
+        .t-search-icon{
+          background-image: url("../../img/t-search-icon.png");
+        }
+        .t-send-icon{
+          background-image: url("../../img/t-send-icon.png");
+        }
+      }
+      .hide-btn-wrap{
+        height: 100%;
+        border-left: 1px solid #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .hide-btn{
+          .bg-icon('../../img/t-hide-icon.png'; 16px; 16px);
+          margin-left: 16px;
+          &:hover{
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
